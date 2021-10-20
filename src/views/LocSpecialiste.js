@@ -13,7 +13,7 @@ export class MapContainer extends Component {
 
             mapCenter: {
                 lat: -4.441931,
-                lng: 15.26623
+                lng: 15.266245
             }
         };
     }
