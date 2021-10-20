@@ -159,7 +159,7 @@ function Specialistes() {
                                                 </button>
                                             </td>
 
-                                        </tr >
+                                        </tr>
                                         )
                                     })
                                 }
