@@ -14,7 +14,7 @@ import Menu from './Menu';
 
 
 function Specialistes() {
-
+    let a;
     let history = useHistory()
 
     const [data, setData] = useState([]); // Data venant de l'API (specialist)
