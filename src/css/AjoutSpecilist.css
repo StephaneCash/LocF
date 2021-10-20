@@ -1,0 +1,25 @@
+.mainDiv {
+    height: 50px;
+    position: absolute;
+    left: 56%;
+    transform: translateX(-50%);
+    top: 60px;
+    width: 92%;
+    min-width: 100px;
+    padding: 5px;
+    border: 0px solid silver;
+    height: auto;
+    padding: 10px;
+}
+
+.buttonEditer {
+    padding: 15;
+    background-color: #223d3d;
+    color: white;
+    margin: 10px auto;
+    box-shadow: 1px 3px silver;
+}
+
+.buttonEditer:hover {
+    color: white
+}

@@ -1,0 +1,79 @@
+.menu {
+    margin-left: -7.5px;
+}
+
+.contentGeneral {
+    border: 1px solid rgb(189, 183, 183);
+    margin-top: 53px;
+    padding: 15px;
+    max-width: 88%;
+    margin-left: 11%;
+    height: 89vh;
+}
+
+table {
+    border: 1px solid silver;
+}
+
+.contentGeneral .tableContent {
+    border: 1px solid rgb(189, 183, 183);
+    background-color: white;
+    padding: 10px;
+    height: 40vh;
+    overflow: scroll;
+}
+
+.contentGeneral table thead {
+    color: white;
+    border: 1px solid silver;
+    background-color: #23262d;
+}
+
+.topPart {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 9px;
+    border: 1px solid rgb(189, 183, 183);
+}
+
+.detail {
+    background-color: white;
+    border: 1px solid rgb(189, 183, 183);
+    padding: 15px;
+    margin-top: 5px;
+}
+
+.detail table thead {
+    margin-top: 2px;
+    text-align: center;
+    line-height: 40px;
+    height: 30px;
+    background-color: #23262d;
+    color: white;
+}
+
+.detail table tbody {
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #23262d;
+    color: white;
+    border: 1px solid white;
+}
+
+.findSpecialistButton, .buttonBootAjouter {
+    padding: 10px;
+    margin-left: -16px;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.buttonBootAjouter {
+    margin-left: 5px;
+}
