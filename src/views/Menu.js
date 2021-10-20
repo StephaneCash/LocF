@@ -14,7 +14,7 @@ function Menu() {
                 </li>
 
                 <li>
-                    <NavLink  to="/pannes">
+                    <NavLink to="/pannes">
                         <center><i className="IconHome fa fa-car "></i></center>
                         Pannes
                     </NavLink>
@@ -43,8 +43,15 @@ function Menu() {
 
                 <li>
                     <NavLink to="/conf">
-                        <center><i className="IconHome fa fa-gear "></i></center>
+                        <center><i className="IconHome fa fa-gear fa-spin"></i></center>
                         Configuration
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink to="/conf">
+                        <center><i className="IconHome fa fa-history "></i></center>
+                        History
                     </NavLink>
                 </li>
             </ul>

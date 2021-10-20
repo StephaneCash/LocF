@@ -17,7 +17,7 @@ function Garages() {
                     </tr>
                 </thead>
                 <tbody>
-                   
+
                 </tbody>
             </table>
         </div>

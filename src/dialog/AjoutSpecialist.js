@@ -3,6 +3,7 @@ import "../css/AjoutSpecilist.css";
 import ApiSpecialiste from '../api/ApiSpecialiste';
 import { useState } from "react";
 import { useHistory } from "react-router-dom"
+import Menu from '../views/Menu';
 
 function AjoutSpecialist() {
 
@@ -33,13 +34,15 @@ function AjoutSpecialist() {
 
     return (
         <>
-
+            <div className="">
+                <Menu></Menu>
+            </div>
             <div className="container mainDiv">
-                <div style={{ fontSize: '28px', border: "1px solid silver", marginBottom: '70px', padding: '10px' }}>
+                <div style={{ fontSize: '28px', border: "1px solid silver", marginBottom: '20px', padding: '10px' }}>
                     Ajouter un spécialiste
                 </div>
 
-                <div className="bloc1">
+                <div style={{ border: "1px solid silver", padding: "30px" }}>
 
                     <div className="form-group">
                         <label>Nom : </label>
@@ -59,9 +62,6 @@ function AjoutSpecialist() {
                             onChange={e => setPrenom(e.target.value)}
                         />
                     </div>
-                </div>
-
-                <div className="bloc2">
                     <div className="form-group">
                         <label>Entrer une adresse</label>
                         <textarea className="form-control" type="text" placeholder="Adresse" value={adresse}
@@ -72,10 +72,19 @@ function AjoutSpecialist() {
                         <label>Selectionner une spécialité</label>
                         <input className="form-control" type="Number" placeholder="Une spécialité" value={specialite_id}
                             onChange={e => setSpecialite_id(e.target.value)}
-                        ></input>
-                    </div>                </div>
-                <button className="btn btn buttonEditer" onClick={onEditSubmit}>{loading ? <><i className="fa fa-refresh fa-spin"></i> Patienter...</> : "Ajouter"}</button>
-
+                        />
+                        <button
+                            className="btn btn buttonEditer"
+                            onClick={onEditSubmit}>
+                            {
+                                loading ? <>
+                                    <i className="fa fa-refresh fa-spin">
+                                    </i>
+                                    Patienter...</> : "Ajouter un spécialiste"
+                            }
+                        </button>
+                    </div>
+                </div>
             </div>
         </>
     )

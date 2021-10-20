@@ -9,6 +9,7 @@ import EditSpecialist from '../dialog/EditSpecialist';
 import AjoutSpecialist from '../dialog/AjoutSpecialist';
 import Errors from '../dialog/Errors';
 import FindSpecialist from "./FindSpecialist";
+import Connexion from './Connexion';
 
 function Routes() {
     return (
@@ -23,6 +24,7 @@ function Routes() {
                     <Route path="/users" exact component={Users} />
                     <Route path="/findSpecialist" exact component={FindSpecialist} />
                     <Route path="/pannes" exact component={Pannes} />
+                    <Route path="/connexion" exact component={Connexion} />
                 </Switch>
             </BrowserRouter>
         </div>

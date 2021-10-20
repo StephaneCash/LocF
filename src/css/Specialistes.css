@@ -3,7 +3,7 @@
 }
 
 .contentGeneral {
-    margin-top: 53px;
+    margin-top: 42px;
     padding: 15px;
     max-width: 88%;
     margin-left: 11%;
@@ -12,12 +12,13 @@
 
 table {
     border: 1px solid silver;
+    cursor: pointer;
 }
 
 .contentGeneral .tableContent {
     border: 1px solid rgb(189, 183, 183);
     background-color: white;
-    padding: 10px;
+    padding: 20px;
     height: 40vh;
     overflow: scroll;
 }
@@ -25,12 +26,12 @@ table {
 .contentGeneral table thead {
     color: white;
     border: 1px solid silver;
-    background-color: #23262d;
+    background: linear-gradient(to top, #23262d, #404144);
 }
 
 .topPart {
     background-color: white;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 9px;
     border: 1px solid rgb(189, 183, 183);
 }
@@ -38,8 +39,9 @@ table {
 .detail {
     background-color: white;
     border: 1px solid rgb(189, 183, 183);
-    padding: 15px;
+    padding: 20px;
     margin-top: 5px;
+    height: auto;
 }
 
 .detail table thead {
@@ -58,9 +60,10 @@ table {
 }
 
 .btn {
-    background-color: #23262d;
+    background: linear-gradient(to top, #23262d, #404144);
     color: white;
     border: 1px solid white;
+    border-radius: 6px;
 }
 
 .findSpecialistButton, .buttonBootAjouter {
@@ -75,4 +78,11 @@ table {
 
 .buttonBootAjouter {
     margin-left: 5px;
+}
+
+p {
+    background-color: #404144;
+    border: 1px solid silver;
+    border-radius: 4px;
+    width: 99%;
 }

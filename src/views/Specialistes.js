@@ -20,6 +20,7 @@ function Specialistes() {
     const [data, setData] = useState([]); // Data venant de l'API (specialist)
     const [valueSearch, setValueSearch] = useState(""); // Value de l'input search
     const [etat, setEtat] = useState(false);
+    const [id, setId] = useState("");
 
     const fetchData = () => {
         ApiSpecialiste.getAllSpecialistes().then(res => {
@@ -41,6 +42,14 @@ function Specialistes() {
 
     const trouverUnSpecialiste = () => {
         history.push('/findSpecialist');
+    }
+
+    const check = () => {
+        console.log("Check")
+    }
+
+    const detailSpecialist = () => {
+
     }
 
     return (
@@ -65,7 +74,7 @@ function Specialistes() {
                             </div>
                         </div>
 
-                        <p style={{ backgroundColor: "#23262d", padding: "10px", color: "silver" }}>
+                        <p class="text" style={{ padding: "10px", color: "silver" }}>
                             Ceci est une liste de meilleurs Spécialistes en dépannage automobile dans le district de LUKUNGA </p>
                         <div className="col-md-12">
                             <div className="row">
@@ -77,18 +86,22 @@ function Specialistes() {
                                 </div>
                                 <div className="col-md-3"></div>
                                 <div className="col-md-3">
-                                    <div className="search" >
-                                        <input type="search"
-                                            placeholder="Rechercher"
-                                            className="form-control searchButton"
-                                            onChange={handleSearch} />  </div >
+                                    <div class="search-field">
+                                        <div class="input-group mb-2">
+                                            <input type="text" class="form-control inputSearchB" placeholder="Rechercher"
+                                                onChange={handleSearch} />
+                                            <div class="input-group-append">
+                                                <i class="input-group-text fa fa-search" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                     <div className="tableContent">
-                        <table className="table table table" >
+                        <table className="table table" >
                             <thead>
                                 <tr>
                                     <th></th>
@@ -109,7 +122,7 @@ function Specialistes() {
                                     }).map(val => {
                                         return (<tr key={val.id}>
                                             <td>
-                                                <input type="checkbox" className="check-item" />
+                                                <input type="checkbox" onClick={check} className="check-item" />
                                             </td>
                                             <td> {val.id} </td>
                                             <td> {val.nom} </td>
@@ -128,6 +141,7 @@ function Specialistes() {
                                                         () => {
                                                             setEtat(false)
                                                             if (window.confirm("Etes-vous sûr de vouloir supprimer ?")) {
+                                                                setEtat(true)
                                                                 ApiSpecialiste.deleteSpecialiste(val.id)
                                                                     .then(fetchData)
                                                                     .catch(err => {
@@ -137,8 +151,12 @@ function Specialistes() {
                                                             setEtat(true)
                                                         }
                                                     }> <i className="fa fa-trash" > </i></button >
-                                                <button className="btn btn buttonBoot"
-                                                    style={{ marginLeft: "5px", width: "37px" }}> <i className="fa fa-info"></i></button>
+                                                <button
+                                                    className="btn btn buttonBoot"
+                                                    onClick={data => setId(val.id)} $
+                                                    style={{ marginLeft: "5px", width: "37px" }}>
+                                                    <i className="fa fa-info"></i>
+                                                </button>
                                             </td>
 
                                         </tr >
@@ -153,9 +171,25 @@ function Specialistes() {
                             <thead>
                                 DETAILS
                             </thead>
-                            <tbody>
-                                Pas de détails pour l'instant
-                            </tbody>
+                            {
+                                id ? <> <tbody>
+                                    {
+                                        data.map(el => {
+                                            if (el.id === id) {
+                                                return <div>
+
+                                                    {el.description}
+                                                </div>
+                                            }
+                                        })
+                                    }
+                                </tbody></> : <>
+                                    <tbody>
+                                        Sélectionne un élément svp !
+                                    </tbody>
+                                </>
+                            }
+
                         </table>
                     </div>
                 </div>
