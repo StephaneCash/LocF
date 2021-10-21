@@ -22,7 +22,7 @@ function Menu() {
 
                 <li>
                     <NavLink to="/garages">
-                        <center><i className="IconHome fas fa-garage-car"></i></center>
+                        <center><i className="IconHome fas fa-garage"></i></center>
                         Garages
                     </NavLink>
                 </li>
