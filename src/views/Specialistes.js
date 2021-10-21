@@ -66,7 +66,7 @@ function Specialistes() {
                         <div className="col-md-12">
                             <div className="row">
                                 <div className="col-md-3">
-                                    <h5 className="mt" > LISTE SPECIALISTES <i className="fa fa-car"> </i></h5 >
+                                    <h5 className="mt" > LISTE SPECIALISTES <div className="faNotEqual"></div> <i className="fa fa-car-crash"> </i></h5 >
                                 </div>
                                 <div className="col-md-9">
 
