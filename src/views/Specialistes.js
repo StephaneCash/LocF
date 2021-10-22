@@ -65,27 +65,29 @@ function Specialistes() {
                         }
                         <div className="col-md-12">
                             <div className="row">
-                                <div className="col-md-3">
-                                    <h5 className="mt" > LISTE SPECIALISTES <div className="faNotEqual"></div> <i className="fa fa-car-crash"> </i></h5 >
+                                <div className="col-md-6">
+                                    <h5 className="" style={{ marginTop: "-6px", marginLeft: "-13px" }} > LISTE DE SPECIALISTES EN DEPANNAGE AUTOMOBILE <i className="fa fa-car"> </i></h5 >
                                 </div>
-                                <div className="col-md-9">
+                                <div className="col-md-6">
 
                                 </div>
                             </div>
                         </div>
+                        <hr />
 
-                        <p class="text" style={{ padding: "10px", color: "silver" }}>
+                        <p class="text" style={{ padding: "10px" }}>
                             Ceci est une liste de meilleurs Spécialistes en dépannage automobile dans le district de LUKUNGA </p>
                         <div className="col-md-12">
                             <div className="row">
-                                <div className="col-md-6">
-                                    <button className="btn btn findSpecialistButton" onClick={trouverUnSpecialiste}> Trouver un spécialiste </button>
+                                <div className="col-md-6" style={{ marginLeft: "-1.3%" }}>
+                                    <button className="btn btn-primary" onClick={trouverUnSpecialiste}> Trouver un spécialiste </button>
                                     <Link to="/ajoutSpecialist">
-                                        <button className="btn btn buttonBootAjouter"> <i className="fa fa-plus"> </i> Ajouter spécialiste</button >
+                                        <button className="btn btn-success" style={{ marginLeft: "10px" }}>
+                                            <i className="fa fa-plus"> </i> Ajouter spécialiste</button >
                                     </Link>
                                 </div>
-                                <div className="col-md-3"></div>
-                                <div className="col-md-3">
+                                <div className="col-md-2" ></div>
+                                <div className="col-md-4" style={{ position: "absolute", right: "-14px" }}>
                                     <div class="search-field">
                                         <div class="input-group mb-2">
                                             <input type="text" class="form-control inputSearchB" placeholder="Rechercher"
@@ -110,9 +112,7 @@ function Specialistes() {
                                     <th> Postnom </th>
                                     <th > Prenom </th>
                                     <th> Spécialité </th>
-                                    <th> Date create </th>
-                                    <th> Date Modif </th>
-                                    <th> Opérations </th>
+                                    <th style={{ width: "12%" }}> Opérations </th>
 
                                 </ tr>
                             </thead> <tbody>
@@ -129,14 +129,12 @@ function Specialistes() {
                                             <td> {val.postnom} </td>
                                             <td> {val.prenom} </td>
                                             < td> Dépanneur de pneux </td>
-                                            <td> {val.created_at} </td>
-                                            <td> {val.updated_at} </td>
                                             <td>< Link to={{
                                                 pathname: '/editSpecialist',
                                                 state: { id: val.id }
                                             }}>
-                                                <button className="btn btn buttonBoot" > <i className="fa fa-edit" > </i></button > </Link>
-                                                <button className="btn btn buttonBoot"
+                                                <button className="btn btn btn" > <i className="fa fa-edit" > </i></button > </Link>
+                                                <button className="btn btn btn"
                                                     onClick={
                                                         () => {
                                                             setEtat(false)
@@ -152,8 +150,8 @@ function Specialistes() {
                                                         }
                                                     }> <i className="fa fa-trash" > </i></button >
                                                 <button
-                                                    className="btn btn buttonBoot"
-                                                    onClick={data => setId(val.id)} $
+                                                    className="btn btn btn"
+                                                    onClick={data => setId(val.id)}
                                                     style={{ marginLeft: "5px", width: "37px" }}>
                                                     <i className="fa fa-info"></i>
                                                 </button>

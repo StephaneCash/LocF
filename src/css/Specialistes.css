@@ -6,8 +6,14 @@
     margin-top: 42px;
     padding: 15px;
     max-width: 88%;
-    margin-left: 11%;
+    margin-left: 12.5%;
     height: 89vh;
+}
+
+.contentGeneral .btn {
+    background: linear-gradient(to top, #4b4e4b, #7b838b);
+    border-color: whitesmoke;
+    color: white;
 }
 
 table {
@@ -20,13 +26,14 @@ table {
     background-color: white;
     padding: 20px;
     height: 40vh;
-    overflow: scroll;
+    overflow: auto;
+    width: 100%;
 }
 
 .contentGeneral table thead {
-    color: white;
-    border: 1px solid silver;
-    background: linear-gradient(to top, #23262d, #404144);
+    color: rgb(44, 43, 43);
+    background: rgb(235, 235, 235);
+    background: linear-gradient( 180deg, rgba(235, 235, 235, 1) 0%, rgba(118, 118, 118, 1) 1100%);
 }
 
 .topPart {
@@ -40,8 +47,9 @@ table {
     background-color: white;
     border: 1px solid rgb(189, 183, 183);
     padding: 20px;
-    margin-top: 5px;
-    height: auto;
+    margin-top: 8px;
+    height: 25vh;
+    color: black;
 }
 
 .detail table thead {
@@ -49,8 +57,7 @@ table {
     text-align: center;
     line-height: 40px;
     height: 30px;
-    background-color: #23262d;
-    color: white;
+    color: #303841;
 }
 
 .detail table tbody {
@@ -59,30 +66,10 @@ table {
     text-align: center;
 }
 
-.btn {
-    background: linear-gradient(to top, #23262d, #404144);
-    color: white;
-    border: 1px solid white;
-    border-radius: 6px;
-}
-
-.findSpecialistButton, .buttonBootAjouter {
-    padding: 10px;
-    margin-left: -16px;
-}
-
-.btn:hover {
-    background-color: black;
-    color: white;
-}
-
-.buttonBootAjouter {
-    margin-left: 5px;
-}
-
 p {
-    background-color: #404144;
     border: 1px solid silver;
+    background-color: #303841;
     border-radius: 4px;
-    width: 99%;
+    width: 100%;
+    color: white;
 }

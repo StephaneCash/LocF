@@ -13,6 +13,7 @@ function AjoutSpecialist() {
     const [adresse, setAdresse] = useState("");
     const [specialite_id, setSpecialite_id] = useState("");
     const [loading, setLoading] = useState(false);
+    const [description, setDescription] = useState("");
 
     const history = useHistory();
 
@@ -22,7 +23,7 @@ function AjoutSpecialist() {
         }, 300)
         try {
             await ApiSpecialiste.addSpecialiste({
-                nom, postnom, prenom, adresse, specialite_id
+                nom, postnom, prenom, adresse, description, specialite_id
             })
             history.push("/");
         } catch {
@@ -66,6 +67,12 @@ function AjoutSpecialist() {
                         <label>Entrer une adresse</label>
                         <textarea className="form-control" type="text" placeholder="Adresse" value={adresse}
                             onChange={e => setAdresse(e.target.value)}
+                        ></textarea>
+                    </div>
+                    <div className="form-group">
+                        <label>Entrer une description</label>
+                        <textarea className="form-control" type="text" placeholder="Description" value={description}
+                            onChange={e => setDescription(e.target.value)}
                         ></textarea>
                     </div>
                     <div className="form-group">
